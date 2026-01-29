@@ -1,5 +1,5 @@
 The algorithm solves the following tasks:
- - counts the number of outomobile which cros crossroads
+ - counts the number of automobile which cros crossroads and visualize data on map.
 
 # Befor using
 !!! FOR STARTING YOU MUST HAVE VIDEOCARD WITH CUDA!!! 
@@ -8,21 +8,27 @@ install required libraries
 pip install requirements.txt
 ```
 
+Video dir structure:
+├── videos/
+    ├── camera_id/
+        ├── video_from_camera.mp4
+    └── glaz.naroda.138-4238e06058/
+        └── glaz.naroda.138-4238e06058_1769022000_86340_001.mp4
+
 ## Start parameters
 When you start scripts, you should use the following parameters:
- - video_path - path to the video file to be analyzed
- - save_video - ```True/Flase```, and if ```True``` use save_video_dir
- - save_video_dir - path to the directory where save processed video
- - save_file_results - ```True/Flase```, and if ```True``` use save_file_results_dir
- - save_file_results_dir - path to the directory where save csv files with timecode of fact
+ - addresses_file_path - path to file with data about video (id of camera, address of location, coordinates on map, roi for crop video, detection results on date)
+ - videos_storage_dir - path to the videos storage dir.
+ - videos_date - date when record video.
+ - map_path - path to .png image with map.
+ - map_coordinates - format [west, south, east, north, zoom].
+ - data_visualize_period - the period in minutes for which the data will be displayed on one slide gif.
+ - gif_path - dir path for save gif.
+ - gif_name - file name for save gif.
 
 You can use bash commandand, for example:
 ```shell
-python3 main.py --video_path video/file/directory/AV2_164001_170001_T8C0_164001.mp4 --save_video False --save_file_results True --save_file_results_dir results
-```
-also you can use different tasks with bash command above(default values ​​are set ```True```):
-```shell
-python3 main.py --pay_detection False --seatbelt_detection True --phone_detection True --eat_drink_detection False
+python3 main.py --video_storage_dir /media/vitkor/project_dat/tests_work/CIR/videos/ --video_date '22.01.2026' --map_path maps/map.png --map_coordinates [60.61432, 56.89003, 60.64281, 56.9041, 15]
 ```
 
 or change this parameters in file opts.py and start main.py
