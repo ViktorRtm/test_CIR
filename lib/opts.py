@@ -17,7 +17,7 @@ parser.add_argument('--device', type=str, default='cuda')
 # ========================= Runtime Configs ==========================
 parser.add_argument('--data_visualize_period', type=int, default=15)
 parser.add_argument('--addresses_file_path', type=str, default='addresses.yaml', metavar='PATH')
-parser.add_argument('--videos_storage_dir', type=str, default='/media/vitkor/project_dat/tests_work/CIR/videos/', metavar='PATH')
+parser.add_argument('--videos_storage_dir', type=str, default='videos/', metavar='PATH')
 parser.add_argument('--videos_date', type=str, default='22.01.2026')
 parser.add_argument('--map_path', type=str, default='maps/map.png', metavar='PATH')
 parser.add_argument('--map_coordinates', type=list, default=[60.61432, 56.89003, 60.64281, 56.9041, 15], metavar='format - [west, south, east, north, zoom]')

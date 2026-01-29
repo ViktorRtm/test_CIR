@@ -57,7 +57,7 @@ class AutomobileCounter():
 
                 success, frame = cap.read()
                 time_from_video_start = int(cap.get((cv2.CAP_PROP_POS_MSEC)))
-                if not success or time_from_video_start > 3 * 60 * 1000:
+                if not success:
                     break
                 
 
