@@ -2,7 +2,6 @@ The algorithm solves the following tasks:
  - counts the number of automobile which cros crossroads and visualize data on map.
 
 # Befor using
-!!! FOR STARTING YOU MUST HAVE VIDEOCARD WITH CUDA!!! 
 install required libraries
 ```shell
 pip install requirements.txt
