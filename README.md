@@ -9,13 +9,13 @@ pip install requirements.txt
 ```
 
 Video dir structure:
-'''shell
+```shell
 ├── videos/
     ├── camera_id/
         ├── video_from_camera.mp4
     └── glaz.naroda.138-4238e06058/
         └── glaz.naroda.138-4238e06058_1769022000_86340_001.mp4
-'''
+```
 
 ## Start parameters
 When you start scripts, you should use the following parameters:
